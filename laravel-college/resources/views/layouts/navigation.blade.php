@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('student.index')" :active="request()->routeIs('student.index')">
+                        {{ __('Student') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('schoolcareer.index')" :active="request()->routeIs('schoolcareer.index')">
+                        {{ __('School Career') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -26,7 +32,7 @@
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"></svg>
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
                             </div>
@@ -68,7 +74,13 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('student.index')" :active="request()->routeIs('student.index')">
+            {{ __('Student') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('schoolcareer.index')" :active="request()->routeIs('schoolcareer.index')">
+            {{ __('School Career') }}
             </x-responsive-nav-link>
         </div>
 
